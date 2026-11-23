@@ -8,6 +8,7 @@ python -m pip install -r requirements.txt
 python -m nltk.downloader averaged_perceptron_tagger_eng cmudict
 python run_all.py                   # scores every measure, writes outputs/
 python error_analysis.py            # 50 worst dev errors per measure, pre-tagged
+python secondary_analysis.py        # within-question ordering, bootstrap CIs
 python validate_textstat.py         # checks our M1 formulas against textstat
 ```
 
@@ -29,8 +30,12 @@ explanations, 400 questions). It is downloaded once and cached in `data/`
 | `m2_features.py` | M2 single lexical and syntactic features (word length, MATTR, word frequency, POS shares, noun-chunk length) |
 | `m3_terminology.py` | M3 terminology measure: G² term inventory from train (cross-fitted), term density, defined-term ratio |
 | `error_analysis.py` | Writes `outputs/error_analysis_<target>.csv` (worst 50 dev errors per measure, with heuristic tags and an empty `manual_category` column) and a summary table |
+| `secondary_analysis.py` | Within-question ordering of the three intended versions, perceived-level pairs, bootstrap CIs over questions with paired differences vs word count |
+| `make_annotation_sheet.py`, `kappa.py`, `annotation/` | 100-item blind self-annotation sheets, guideline, weighted Cohen's κ |
+| `final_test.py` | One-time test-split evaluation (refuses a second run). Not run yet |
 | `M1_REPRODUCTION.md` | Per-formula notes and expected dev numbers |
 | `M2_M3_RESULTS.md` | M2/M3 method notes, dev results and first error-analysis findings |
+| `SECONDARY_RESULTS.md` | Ordering, bootstrap and annotation notes |
 
 The individual `m0_*.py` and `m1_*.py` scripts still run on their own and
 print the same numbers as before.

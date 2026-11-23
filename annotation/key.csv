@@ -1,0 +1,101 @@
+item,id,intended,perceived
+1,dev-037-0,Elementary,Elementary
+2,train-093-1,High School,Elementary
+3,dev-017-1,High School,High School
+4,train-122-0,Elementary,Elementary
+5,dev-066-2,Graduate,High School
+6,dev-010-1,High School,High School
+7,train-153-1,High School,High School
+8,train-124-0,Elementary,High School
+9,train-050-2,Graduate,Elementary
+10,dev-070-2,Graduate,Graduate
+11,dev-055-0,Elementary,Elementary
+12,train-159-1,High School,High School
+13,train-182-2,Graduate,High School
+14,train-090-0,Elementary,High School
+15,train-014-2,Graduate,High School
+16,train-042-0,Elementary,Elementary
+17,train-106-2,Graduate,High School
+18,dev-000-2,Graduate,Graduate
+19,train-171-1,High School,High School
+20,train-065-1,High School,High School
+21,train-072-0,Elementary,Elementary
+22,train-128-2,Graduate,High School
+23,train-031-0,Elementary,Elementary
+24,train-055-2,Graduate,High School
+25,train-181-0,Elementary,High School
+26,dev-029-0,Elementary,Elementary
+27,train-101-1,High School,High School
+28,dev-009-1,High School,High School
+29,train-105-1,High School,High School
+30,dev-036-2,Graduate,High School
+31,dev-008-1,High School,High School
+32,train-145-2,Graduate,High School
+33,train-148-2,Graduate,Elementary
+34,train-051-0,Elementary,Elementary
+35,train-013-1,High School,High School
+36,train-031-1,High School,High School
+37,train-008-1,High School,Elementary
+38,dev-071-2,Graduate,High School
+39,dev-034-2,Graduate,High School
+40,train-117-2,Graduate,High School
+41,dev-074-1,High School,Elementary
+42,train-063-0,Elementary,Elementary
+43,train-015-2,Graduate,High School
+44,dev-013-0,Elementary,Elementary
+45,dev-048-0,Elementary,High School
+46,train-143-0,Elementary,High School
+47,train-170-1,High School,High School
+48,dev-058-2,Graduate,Elementary
+49,train-145-0,Elementary,High School
+50,train-184-0,Elementary,High School
+51,dev-020-2,Graduate,Graduate
+52,train-074-2,Graduate,Elementary
+53,train-137-0,Elementary,High School
+54,train-032-2,Graduate,High School
+55,dev-028-1,High School,High School
+56,train-143-2,Graduate,Graduate
+57,train-156-1,High School,Graduate
+58,train-112-2,Graduate,High School
+59,train-055-0,Elementary,Elementary
+60,train-191-2,Graduate,High School
+61,train-114-0,Elementary,Elementary
+62,train-050-0,Elementary,Elementary
+63,train-091-1,High School,High School
+64,dev-061-1,High School,Elementary
+65,dev-026-0,Elementary,Elementary
+66,train-051-2,Graduate,High School
+67,train-018-0,Elementary,Elementary
+68,train-130-2,Graduate,High School
+69,train-108-2,Graduate,High School
+70,train-166-0,Elementary,Elementary
+71,train-133-0,Elementary,High School
+72,train-062-1,High School,High School
+73,train-179-1,High School,High School
+74,train-186-1,High School,High School
+75,train-179-0,Elementary,High School
+76,train-110-1,High School,Elementary
+77,dev-005-0,Elementary,High School
+78,train-081-0,Elementary,Elementary
+79,train-194-1,High School,High School
+80,train-098-0,Elementary,Elementary
+81,train-105-0,Elementary,Elementary
+82,dev-000-1,High School,High School
+83,train-170-2,Graduate,Graduate
+84,train-184-2,Graduate,Graduate
+85,train-008-2,Graduate,High School
+86,train-070-0,Elementary,Elementary
+87,train-048-0,Elementary,High School
+88,train-114-1,High School,High School
+89,dev-030-1,High School,High School
+90,train-148-1,High School,Elementary
+91,train-131-2,Graduate,Graduate
+92,dev-000-0,Elementary,High School
+93,train-092-1,High School,High School
+94,train-124-2,Graduate,High School
+95,dev-025-1,High School,Graduate
+96,train-158-1,High School,High School
+97,dev-009-2,Graduate,Graduate
+98,train-129-1,High School,Graduate
+99,dev-021-0,Elementary,Elementary
+100,dev-060-2,Graduate,High School
