@@ -36,6 +36,7 @@ explanations, 400 questions). It is downloaded once and cached in `data/`
 | `M1_REPRODUCTION.md` | Per-formula notes and expected dev numbers |
 | `M2_M3_RESULTS.md` | M2/M3 method notes, dev results and first error-analysis findings |
 | `SECONDARY_RESULTS.md` | Ordering, bootstrap and annotation notes |
+| `PROGRESS.md` | Overall progress, findings, open team decisions and plan |
 
 The individual `m0_*.py` and `m1_*.py` scripts still run on their own and
 print the same numbers as before.
