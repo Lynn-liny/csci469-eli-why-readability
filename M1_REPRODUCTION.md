@@ -21,3 +21,17 @@ The raw Reading Ease score increases as text gets easier. The script negates it 
 | Flesch Reading Ease | 54.58% | 0.336 | 0.454 | 0.286 | 0.684 | 0.039 |
 
 As a quick check, the Reading Ease confusion matrix should be [[12, 51, 0], [9, 118, 1], [0, 48, 1]]. Word count predicts zero Graduate examples. Grade Level correctly predicts 3 of 49 Graduate examples. Reading Ease correctly predicts 1 of 49. The intended-level accuracy for Reading Ease is 48.33% on this same annotated subset. These are development results. The held-out split is reserved for final evaluation.
+
+
+## Automated Readability Index (ARI)
+
+Run `python m1_ari.py` from the repository root. ARI uses letters and digits per word and words per sentence. It reuses the word and sentence boundaries from the Flesch evaluation. The implementation follows the [ARI formula documented by NIST](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=914701).
+
+The same train/dev split and train-only accuracy fitting apply. For human-perceived levels, the raw cutoffs are approximately 8.729 and 18.280.
+
+| Label target | Accuracy | Macro-F1 | Mean absolute ordinal error | Elementary F1 | High School F1 | Graduate F1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Human-perceived | 54.17% | 0.349 | 0.471 | 0.214 | 0.686 | 0.145 |
+| Intended | 47.08% | 0.433 | 0.713 | 0.513 | 0.210 | 0.576 |
+
+The human-perceived confusion matrix is `[[9, 54, 0], [9, 117, 2], [3, 42, 4]]`. ARI correctly predicts 4 of 49 Graduate texts. Word count correctly predicts zero, but its overall accuracy and macro-F1 are higher on this split.
