@@ -1,0 +1,1440 @@
+{
+  "source": "https://huggingface.co/datasets/INK-USC/eli-why-perceived-background-match/resolve/aa89f444f176eafa00f4c5c75e1d66746c1b60bf/perceived_background_match_with_explanations.jsonl",
+  "source_sha256": "c153e1e01a681d144ff358e8e8e003f8e6d6b35200ef629662e04b233ca41e9e",
+  "seed": 469,
+  "level_order": [
+    "Elementary",
+    "High School",
+    "Graduate"
+  ],
+  "measures": {
+    "word_count": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          72,
+          286
+        ],
+        "accuracy": 0.5791666666666667,
+        "macro_f1": 0.3789491684836048,
+        "mean_absolute_ordinal_error": 0.42083333333333334,
+        "per_level_f1": {
+          "Elementary": 0.43478260869565216,
+          "High School": 0.7020648967551623,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            20,
+            43,
+            0
+          ],
+          [
+            9,
+            119,
+            0
+          ],
+          [
+            0,
+            49,
+            0
+          ]
+        ],
+        "spearman_rho": 0.5207932297746437,
+        "spearman_rho_controlling_length": 0.0
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          93,
+          147
+        ],
+        "accuracy": 0.6083333333333333,
+        "macro_f1": 0.6076425426918892,
+        "mean_absolute_ordinal_error": 0.42083333333333334,
+        "per_level_f1": {
+          "Elementary": 0.7607361963190185,
+          "High School": 0.45962732919254656,
+          "Graduate": 0.6025641025641025
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            62,
+            16,
+            2
+          ],
+          [
+            16,
+            37,
+            27
+          ],
+          [
+            5,
+            28,
+            47
+          ]
+        ],
+        "spearman_rho": 0.684906080190639,
+        "spearman_rho_controlling_length": 0.0
+      }
+    },
+    "flesch_kincaid": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          10.055565217391308,
+          17.676203703703703
+        ],
+        "accuracy": 0.55,
+        "macro_f1": 0.3914610754311377,
+        "mean_absolute_ordinal_error": 0.4625,
+        "per_level_f1": {
+          "Elementary": 0.3883495145631068,
+          "High School": 0.6749226006191951,
+          "Graduate": 0.1111111111111111
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            20,
+            43,
+            0
+          ],
+          [
+            17,
+            109,
+            2
+          ],
+          [
+            3,
+            43,
+            3
+          ]
+        ],
+        "spearman_rho": 0.34664980932861855,
+        "spearman_rho_controlling_length": 0.19821849804178085
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          11.727272727272727,
+          14.017068965517243
+        ],
+        "accuracy": 0.4666666666666667,
+        "macro_f1": 0.46641713433618615,
+        "mean_absolute_ordinal_error": 0.6333333333333333,
+        "per_level_f1": {
+          "Elementary": 0.49696969696969695,
+          "High School": 0.34177215189873417,
+          "Graduate": 0.5605095541401274
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            41,
+            28,
+            11
+          ],
+          [
+            31,
+            27,
+            22
+          ],
+          [
+            13,
+            23,
+            44
+          ]
+        ],
+        "spearman_rho": 0.4341747924617308,
+        "spearman_rho_controlling_length": 0.273443723309671
+      }
+    },
+    "flesch_reading_ease": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          59.31737068965519,
+          2.565000000000026
+        ],
+        "accuracy": 0.5458333333333333,
+        "macro_f1": 0.3363293143344294,
+        "mean_absolute_ordinal_error": 0.45416666666666666,
+        "per_level_f1": {
+          "Elementary": 0.2857142857142857,
+          "High School": 0.6840579710144927,
+          "Graduate": 0.0392156862745098
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            12,
+            51,
+            0
+          ],
+          [
+            9,
+            118,
+            1
+          ],
+          [
+            0,
+            48,
+            1
+          ]
+        ],
+        "spearman_rho": 0.36143409665571424,
+        "spearman_rho_controlling_length": 0.17694924315682123
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          46.53383084577118,
+          28.38644200626962
+        ],
+        "accuracy": 0.48333333333333334,
+        "macro_f1": 0.4876673713883016,
+        "mean_absolute_ordinal_error": 0.5833333333333334,
+        "per_level_f1": {
+          "Elementary": 0.5454545454545454,
+          "High School": 0.37209302325581395,
+          "Graduate": 0.5454545454545454
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            42,
+            30,
+            8
+          ],
+          [
+            24,
+            32,
+            24
+          ],
+          [
+            8,
+            30,
+            42
+          ]
+        ],
+        "spearman_rho": 0.45921838045680896,
+        "spearman_rho_controlling_length": 0.2481248739142515
+      }
+    },
+    "ari": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          8.728928571428568,
+          18.280210084033612
+        ],
+        "accuracy": 0.5416666666666666,
+        "macro_f1": 0.3486524228459712,
+        "mean_absolute_ordinal_error": 0.4708333333333333,
+        "per_level_f1": {
+          "Elementary": 0.21428571428571427,
+          "High School": 0.6862170087976539,
+          "Graduate": 0.14545454545454545
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            9,
+            54,
+            0
+          ],
+          [
+            9,
+            117,
+            2
+          ],
+          [
+            3,
+            42,
+            4
+          ]
+        ],
+        "spearman_rho": 0.3154532728610345,
+        "spearman_rho_controlling_length": 0.19660307820928316
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          12.335794392523361,
+          13.255317460317457
+        ],
+        "accuracy": 0.4708333333333333,
+        "macro_f1": 0.43289992376038355,
+        "mean_absolute_ordinal_error": 0.7125,
+        "per_level_f1": {
+          "Elementary": 0.5130890052356021,
+          "High School": 0.20952380952380953,
+          "Graduate": 0.5760869565217391
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            49,
+            7,
+            24
+          ],
+          [
+            42,
+            11,
+            27
+          ],
+          [
+            20,
+            7,
+            53
+          ]
+        ],
+        "spearman_rho": 0.3825776354306947,
+        "spearman_rho_controlling_length": 0.25651707373009747
+      }
+    },
+    "dale_chall": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          9.870493009708738,
+          13.79602918660287
+        ],
+        "accuracy": 0.5708333333333333,
+        "macro_f1": 0.386929390546184,
+        "mean_absolute_ordinal_error": 0.44583333333333336,
+        "per_level_f1": {
+          "Elementary": 0.4672897196261682,
+          "High School": 0.6934984520123839,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            25,
+            38,
+            0
+          ],
+          [
+            15,
+            112,
+            1
+          ],
+          [
+            4,
+            45,
+            0
+          ]
+        ],
+        "spearman_rho": 0.41756520418891035,
+        "spearman_rho_controlling_length": 0.21451377465194338
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          10.834720105820107,
+          12.013749645390071
+        ],
+        "accuracy": 0.5083333333333333,
+        "macro_f1": 0.5019770793969126,
+        "mean_absolute_ordinal_error": 0.5708333333333333,
+        "per_level_f1": {
+          "Elementary": 0.6170212765957447,
+          "High School": 0.38509316770186336,
+          "Graduate": 0.5038167938931297
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            58,
+            19,
+            3
+          ],
+          [
+            34,
+            31,
+            15
+          ],
+          [
+            16,
+            31,
+            33
+          ]
+        ],
+        "spearman_rho": 0.5121047679651721,
+        "spearman_rho_controlling_length": 0.27195664719290746
+      }
+    },
+    "smog": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          11.429527900616531,
+          19.48791578843652
+        ],
+        "accuracy": 0.55,
+        "macro_f1": 0.3326492851135408,
+        "mean_absolute_ordinal_error": 0.45,
+        "per_level_f1": {
+          "Elementary": 0.2682926829268293,
+          "High School": 0.6896551724137931,
+          "Graduate": 0.04
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            11,
+            52,
+            0
+          ],
+          [
+            8,
+            120,
+            0
+          ],
+          [
+            0,
+            48,
+            1
+          ]
+        ],
+        "spearman_rho": 0.34253590801040207,
+        "spearman_rho_controlling_length": 0.19175364591798552
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          13.81666964889586,
+          15.470042427545799
+        ],
+        "accuracy": 0.48333333333333334,
+        "macro_f1": 0.47639755467322115,
+        "mean_absolute_ordinal_error": 0.6333333333333333,
+        "per_level_f1": {
+          "Elementary": 0.5348837209302325,
+          "High School": 0.3333333333333333,
+          "Graduate": 0.5609756097560976
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            46,
+            19,
+            15
+          ],
+          [
+            33,
+            24,
+            23
+          ],
+          [
+            13,
+            21,
+            46
+          ]
+        ],
+        "spearman_rho": 0.4222085631425497,
+        "spearman_rho_controlling_length": 0.25378747911423594
+      }
+    },
+    "coleman_liau": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          9.491914893617018,
+          20.432090395480227
+        ],
+        "accuracy": 0.5166666666666667,
+        "macro_f1": 0.2869988072300211,
+        "mean_absolute_ordinal_error": 0.49166666666666664,
+        "per_level_f1": {
+          "Elementary": 0.19047619047619047,
+          "High School": 0.6705202312138728,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            8,
+            55,
+            0
+          ],
+          [
+            11,
+            116,
+            1
+          ],
+          [
+            2,
+            47,
+            0
+          ]
+        ],
+        "spearman_rho": 0.3183237525878842,
+        "spearman_rho_controlling_length": 0.14218355044700426
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          13.515348837209302,
+          14.950243902439023
+        ],
+        "accuracy": 0.43333333333333335,
+        "macro_f1": 0.4076318027210884,
+        "mean_absolute_ordinal_error": 0.6916666666666667,
+        "per_level_f1": {
+          "Elementary": 0.5510204081632653,
+          "High School": 0.171875,
+          "Graduate": 0.5
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            54,
+            17,
+            9
+          ],
+          [
+            41,
+            11,
+            28
+          ],
+          [
+            21,
+            20,
+            39
+          ]
+        ],
+        "spearman_rho": 0.41211433774253686,
+        "spearman_rho_controlling_length": 0.2093295435186348
+      }
+    },
+    "mean_word_length": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          4.595238095238095,
+          6.489583333333333
+        ],
+        "accuracy": 0.5208333333333334,
+        "macro_f1": 0.2947428246660983,
+        "mean_absolute_ordinal_error": 0.4875,
+        "per_level_f1": {
+          "Elementary": 0.21176470588235294,
+          "High School": 0.672463768115942,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            9,
+            54,
+            0
+          ],
+          [
+            11,
+            116,
+            1
+          ],
+          [
+            2,
+            47,
+            0
+          ]
+        ],
+        "spearman_rho": 0.3088687035662572,
+        "spearman_rho_controlling_length": 0.12750721211792526
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          5.2578125,
+          5.470588235294118
+        ],
+        "accuracy": 0.44166666666666665,
+        "macro_f1": 0.4058722330104503,
+        "mean_absolute_ordinal_error": 0.6875,
+        "per_level_f1": {
+          "Elementary": 0.5555555555555556,
+          "High School": 0.13445378151260504,
+          "Graduate": 0.5276073619631901
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            55,
+            16,
+            9
+          ],
+          [
+            41,
+            8,
+            31
+          ],
+          [
+            22,
+            15,
+            43
+          ]
+        ],
+        "spearman_rho": 0.40132419437752487,
+        "spearman_rho_controlling_length": 0.18916014936901418
+      }
+    },
+    "mean_sentence_length": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          9.4,
+          33
+        ],
+        "accuracy": 0.5291666666666667,
+        "macro_f1": 0.23069936421435058,
+        "mean_absolute_ordinal_error": 0.4708333333333333,
+        "per_level_f1": {
+          "Elementary": 0.0,
+          "High School": 0.6920980926430518,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            0,
+            63,
+            0
+          ],
+          [
+            1,
+            127,
+            0
+          ],
+          [
+            0,
+            49,
+            0
+          ]
+        ],
+        "spearman_rho": 0.12525008698062395,
+        "spearman_rho_controlling_length": 0.16295117269726586
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          19.4,
+          20.875
+        ],
+        "accuracy": 0.36666666666666664,
+        "macro_f1": 0.3474760433766213,
+        "mean_absolute_ordinal_error": 0.8708333333333333,
+        "per_level_f1": {
+          "Elementary": 0.4304932735426009,
+          "High School": 0.21487603305785125,
+          "Graduate": 0.39705882352941174
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            48,
+            15,
+            17
+          ],
+          [
+            55,
+            13,
+            12
+          ],
+          [
+            40,
+            13,
+            27
+          ]
+        ],
+        "spearman_rho": 0.09646033669563274,
+        "spearman_rho_controlling_length": 0.15736623785541964
+      }
+    },
+    "mattr": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          32.03703703703704,
+          46.86538461538461
+        ],
+        "accuracy": 0.5375,
+        "macro_f1": 0.2608167233835683,
+        "mean_absolute_ordinal_error": 0.4625,
+        "per_level_f1": {
+          "Elementary": 0.08823529411764706,
+          "High School": 0.6942148760330579,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            3,
+            60,
+            0
+          ],
+          [
+            2,
+            126,
+            0
+          ],
+          [
+            0,
+            49,
+            0
+          ]
+        ],
+        "spearman_rho": 0.05499207124410624,
+        "spearman_rho_controlling_length": -0.014012407193238804
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          39.25,
+          41.96875
+        ],
+        "accuracy": 0.3458333333333333,
+        "macro_f1": 0.346037502237166,
+        "mean_absolute_ordinal_error": 0.8416666666666667,
+        "per_level_f1": {
+          "Elementary": 0.35294117647058826,
+          "High School": 0.3170731707317073,
+          "Graduate": 0.36809815950920244
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            27,
+            27,
+            26
+          ],
+          [
+            27,
+            26,
+            27
+          ],
+          [
+            19,
+            31,
+            30
+          ]
+        ],
+        "spearman_rho": 0.10293651242094644,
+        "spearman_rho_controlling_length": 0.020777356315091228
+      }
+    },
+    "mean_zipf": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          5.7668333333333335,
+          5.3280473372781065
+        ],
+        "accuracy": 0.5333333333333333,
+        "macro_f1": 0.38865558933030336,
+        "mean_absolute_ordinal_error": 0.4875,
+        "per_level_f1": {
+          "Elementary": 0.4444444444444444,
+          "High School": 0.6559485530546624,
+          "Graduate": 0.06557377049180328
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            24,
+            37,
+            2
+          ],
+          [
+            18,
+            102,
+            8
+          ],
+          [
+            3,
+            44,
+            2
+          ]
+        ],
+        "spearman_rho": 0.31304549728383413,
+        "spearman_rho_controlling_length": 0.1323465631843444
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          5.650705882352941,
+          5.4682352941176475
+        ],
+        "accuracy": 0.4875,
+        "macro_f1": 0.4893236902148177,
+        "mean_absolute_ordinal_error": 0.575,
+        "per_level_f1": {
+          "Elementary": 0.5747126436781609,
+          "High School": 0.39325842696629215,
+          "Graduate": 0.5
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            50,
+            27,
+            3
+          ],
+          [
+            32,
+            35,
+            13
+          ],
+          [
+            12,
+            36,
+            32
+          ]
+        ],
+        "spearman_rho": 0.49777803218139716,
+        "spearman_rho_controlling_length": 0.332986196968564
+      }
+    },
+    "oov_5000": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.08791208791208792,
+          0.32710280373831774
+        ],
+        "accuracy": 0.5666666666666667,
+        "macro_f1": 0.3349559082892416,
+        "mean_absolute_ordinal_error": 0.44166666666666665,
+        "per_level_f1": {
+          "Elementary": 0.2962962962962963,
+          "High School": 0.7085714285714285,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            12,
+            51,
+            0
+          ],
+          [
+            4,
+            124,
+            0
+          ],
+          [
+            2,
+            47,
+            0
+          ]
+        ],
+        "spearman_rho": 0.32760821180613936,
+        "spearman_rho_controlling_length": 0.2054703995195016
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.128,
+          0.1875
+        ],
+        "accuracy": 0.5375,
+        "macro_f1": 0.539385760438392,
+        "mean_absolute_ordinal_error": 0.5166666666666667,
+        "per_level_f1": {
+          "Elementary": 0.5263157894736842,
+          "High School": 0.46153846153846156,
+          "Graduate": 0.6303030303030303
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            35,
+            35,
+            10
+          ],
+          [
+            15,
+            42,
+            23
+          ],
+          [
+            3,
+            25,
+            52
+          ]
+        ],
+        "spearman_rho": 0.519436972612724,
+        "spearman_rho_controlling_length": 0.4444256407818734
+      }
+    },
+    "rare_word_share": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.013157894736842105,
+          0.14285714285714285
+        ],
+        "accuracy": 0.5333333333333333,
+        "macro_f1": 0.3423891169604765,
+        "mean_absolute_ordinal_error": 0.48333333333333334,
+        "per_level_f1": {
+          "Elementary": 0.3564356435643564,
+          "High School": 0.6707317073170732,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            18,
+            44,
+            1
+          ],
+          [
+            17,
+            110,
+            1
+          ],
+          [
+            3,
+            46,
+            0
+          ]
+        ],
+        "spearman_rho": 0.35259326791890416,
+        "spearman_rho_controlling_length": 0.23539536748956444
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.028985507246376812,
+          0.057971014492753624
+        ],
+        "accuracy": 0.55,
+        "macro_f1": 0.5478793358540194,
+        "mean_absolute_ordinal_error": 0.5416666666666666,
+        "per_level_f1": {
+          "Elementary": 0.5949367088607594,
+          "High School": 0.44155844155844154,
+          "Graduate": 0.6071428571428571
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            47,
+            18,
+            15
+          ],
+          [
+            24,
+            34,
+            22
+          ],
+          [
+            7,
+            22,
+            51
+          ]
+        ],
+        "spearman_rho": 0.47812373308790285,
+        "spearman_rho_controlling_length": 0.38352279803173994
+      }
+    },
+    "noun_share": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.23893805309734514,
+          0.4294117647058823
+        ],
+        "accuracy": 0.5416666666666666,
+        "macro_f1": 0.29838556505223174,
+        "mean_absolute_ordinal_error": 0.4708333333333333,
+        "per_level_f1": {
+          "Elementary": 0.2,
+          "High School": 0.6951566951566952,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            8,
+            55,
+            0
+          ],
+          [
+            6,
+            122,
+            0
+          ],
+          [
+            3,
+            46,
+            0
+          ]
+        ],
+        "spearman_rho": 0.2257458754972791,
+        "spearman_rho_controlling_length": 0.09712670179153716
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.2823529411764706,
+          0.2905982905982906
+        ],
+        "accuracy": 0.44166666666666665,
+        "macro_f1": 0.3824763788935764,
+        "mean_absolute_ordinal_error": 0.7541666666666667,
+        "per_level_f1": {
+          "Elementary": 0.445859872611465,
+          "High School": 0.12121212121212122,
+          "Graduate": 0.5803571428571429
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            35,
+            11,
+            34
+          ],
+          [
+            29,
+            6,
+            45
+          ],
+          [
+            13,
+            2,
+            65
+          ]
+        ],
+        "spearman_rho": 0.3161076777697538,
+        "spearman_rho_controlling_length": 0.17714491321334555
+      }
+    },
+    "adj_share": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.04477611940298507,
+          0.23300970873786409
+        ],
+        "accuracy": 0.5333333333333333,
+        "macro_f1": 0.267188315075639,
+        "mean_absolute_ordinal_error": 0.4666666666666667,
+        "per_level_f1": {
+          "Elementary": 0.11267605633802817,
+          "High School": 0.6888888888888889,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            4,
+            59,
+            0
+          ],
+          [
+            4,
+            124,
+            0
+          ],
+          [
+            0,
+            49,
+            0
+          ]
+        ],
+        "spearman_rho": 0.13293709768269066,
+        "spearman_rho_controlling_length": -0.026777189489316768
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.0898876404494382,
+          0.10891089108910891
+        ],
+        "accuracy": 0.45,
+        "macro_f1": 0.42750581312150926,
+        "mean_absolute_ordinal_error": 0.75,
+        "per_level_f1": {
+          "Elementary": 0.46357615894039733,
+          "High School": 0.288135593220339,
+          "Graduate": 0.5308056872037915
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            35,
+            12,
+            33
+          ],
+          [
+            21,
+            17,
+            42
+          ],
+          [
+            15,
+            9,
+            56
+          ]
+        ],
+        "spearman_rho": 0.2506225259113414,
+        "spearman_rho_controlling_length": 0.0676851552975225
+      }
+    },
+    "verb_share": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.21794871794871795,
+          0.08080808080808081
+        ],
+        "accuracy": 0.5458333333333333,
+        "macro_f1": 0.2924079668353669,
+        "mean_absolute_ordinal_error": 0.45416666666666666,
+        "per_level_f1": {
+          "Elementary": 0.14084507042253522,
+          "High School": 0.6963788300835655,
+          "Graduate": 0.04
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            5,
+            58,
+            0
+          ],
+          [
+            3,
+            125,
+            0
+          ],
+          [
+            0,
+            48,
+            1
+          ]
+        ],
+        "spearman_rho": 0.2706332993133174,
+        "spearman_rho_controlling_length": 0.17419990063181334
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.18888888888888888,
+          0.15602836879432624
+        ],
+        "accuracy": 0.45,
+        "macro_f1": 0.43398727650264085,
+        "mean_absolute_ordinal_error": 0.6833333333333333,
+        "per_level_f1": {
+          "Elementary": 0.3697478991596639,
+          "High School": 0.375,
+          "Graduate": 0.5572139303482587
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            22,
+            29,
+            29
+          ],
+          [
+            14,
+            30,
+            36
+          ],
+          [
+            3,
+            21,
+            56
+          ]
+        ],
+        "spearman_rho": 0.35478220434582436,
+        "spearman_rho_controlling_length": 0.26680891107743876
+      }
+    },
+    "mean_np_length": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          1.3846153846153846,
+          2.230769230769231
+        ],
+        "accuracy": 0.5125,
+        "macro_f1": 0.3240259990000385,
+        "mean_absolute_ordinal_error": 0.5083333333333333,
+        "per_level_f1": {
+          "Elementary": 0.3177570093457944,
+          "High School": 0.654320987654321,
+          "Graduate": 0.0
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            17,
+            46,
+            0
+          ],
+          [
+            22,
+            106,
+            0
+          ],
+          [
+            5,
+            44,
+            0
+          ]
+        ],
+        "spearman_rho": 0.2889175317449014,
+        "spearman_rho_controlling_length": 0.09770930704313928
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          1.5,
+          1.5737704918032787
+        ],
+        "accuracy": 0.48333333333333334,
+        "macro_f1": 0.42866659225775244,
+        "mean_absolute_ordinal_error": 0.6791666666666667,
+        "per_level_f1": {
+          "Elementary": 0.574585635359116,
+          "High School": 0.1414141414141414,
+          "Graduate": 0.57
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            52,
+            5,
+            23
+          ],
+          [
+            33,
+            7,
+            40
+          ],
+          [
+            16,
+            7,
+            57
+          ]
+        ],
+        "spearman_rho": 0.3622650844539107,
+        "spearman_rho_controlling_length": 0.12394372526365272
+      }
+    },
+    "term_density": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.0,
+          0.0975609756097561
+        ],
+        "accuracy": 0.5541666666666667,
+        "macro_f1": 0.3907022099128729,
+        "mean_absolute_ordinal_error": 0.45416666666666666,
+        "per_level_f1": {
+          "Elementary": 0.38,
+          "High School": 0.6788990825688074,
+          "Graduate": 0.11320754716981132
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            19,
+            44,
+            0
+          ],
+          [
+            16,
+            111,
+            1
+          ],
+          [
+            2,
+            44,
+            3
+          ]
+        ],
+        "spearman_rho": 0.3401825844358121,
+        "spearman_rho_controlling_length": 0.1609750264026208
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.0,
+          0.016666666666666666
+        ],
+        "accuracy": 0.4875,
+        "macro_f1": 0.46618196618196617,
+        "mean_absolute_ordinal_error": 0.6666666666666666,
+        "per_level_f1": {
+          "Elementary": 0.47863247863247865,
+          "High School": 0.3484848484848485,
+          "Graduate": 0.5714285714285714
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            28,
+            16,
+            36
+          ],
+          [
+            8,
+            23,
+            49
+          ],
+          [
+            1,
+            13,
+            66
+          ]
+        ],
+        "spearman_rho": 0.36516733253649203,
+        "spearman_rho_controlling_length": 0.12414976542119369
+      }
+    },
+    "rare_term_density": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.006622516556291391,
+          0.10975609756097561
+        ],
+        "accuracy": 0.5666666666666667,
+        "macro_f1": 0.3794900299644133,
+        "mean_absolute_ordinal_error": 0.4375,
+        "per_level_f1": {
+          "Elementary": 0.32941176470588235,
+          "High School": 0.6979472140762464,
+          "Graduate": 0.1111111111111111
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            14,
+            49,
+            0
+          ],
+          [
+            7,
+            119,
+            2
+          ],
+          [
+            1,
+            45,
+            3
+          ]
+        ],
+        "spearman_rho": 0.47596035492433053,
+        "spearman_rho_controlling_length": 0.3291158683525468
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.013888888888888888,
+          0.02654867256637168
+        ],
+        "accuracy": 0.4708333333333333,
+        "macro_f1": 0.4243472870724099,
+        "mean_absolute_ordinal_error": 0.6875,
+        "per_level_f1": {
+          "Elementary": 0.4444444444444444,
+          "High School": 0.22608695652173913,
+          "Graduate": 0.602510460251046
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            28,
+            16,
+            36
+          ],
+          [
+            16,
+            13,
+            51
+          ],
+          [
+            2,
+            6,
+            72
+          ]
+        ],
+        "spearman_rho": 0.4497387218362172,
+        "spearman_rho_controlling_length": 0.23984315679459284
+      }
+    },
+    "defined_term_ratio": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          1.0,
+          0.14285714285714285
+        ],
+        "accuracy": 0.3,
+        "macro_f1": 0.29540420819490587,
+        "mean_absolute_ordinal_error": 0.8833333333333333,
+        "per_level_f1": {
+          "Elementary": 0.2857142857142857,
+          "High School": 0.27906976744186046,
+          "Graduate": 0.32142857142857145
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            12,
+            8,
+            43
+          ],
+          [
+            8,
+            24,
+            96
+          ],
+          [
+            1,
+            12,
+            36
+          ]
+        ],
+        "spearman_rho": -0.02890516932286526,
+        "spearman_rho_controlling_length": -0.03653331379023676
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          1.0,
+          0.25
+        ],
+        "accuracy": 0.4583333333333333,
+        "macro_f1": 0.38997078202443897,
+        "mean_absolute_ordinal_error": 0.7666666666666667,
+        "per_level_f1": {
+          "Elementary": 0.3564356435643564,
+          "High School": 0.24,
+          "Graduate": 0.5734767025089605
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            18,
+            8,
+            54
+          ],
+          [
+            3,
+            12,
+            65
+          ],
+          [
+            0,
+            0,
+            80
+          ]
+        ],
+        "spearman_rho": 0.08186620131719599,
+        "spearman_rho_controlling_length": 0.10823763263744841
+      }
+    },
+    "undefined_term_density": {
+      "perceived": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.006622516556291391,
+          0.10975609756097561
+        ],
+        "accuracy": 0.5666666666666667,
+        "macro_f1": 0.3783488758765271,
+        "mean_absolute_ordinal_error": 0.44166666666666665,
+        "per_level_f1": {
+          "Elementary": 0.3218390804597701,
+          "High School": 0.7,
+          "Graduate": 0.11320754716981132
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            14,
+            49,
+            0
+          ],
+          [
+            8,
+            119,
+            1
+          ],
+          [
+            2,
+            44,
+            3
+          ]
+        ],
+        "spearman_rho": 0.4555285138135029,
+        "spearman_rho_controlling_length": 0.30214445486936026
+      },
+      "intended": {
+        "thresholds_in_raw_score_order_elementary_then_graduate": [
+          0.014084507042253521,
+          0.02654867256637168
+        ],
+        "accuracy": 0.4583333333333333,
+        "macro_f1": 0.40795889933820967,
+        "mean_absolute_ordinal_error": 0.6833333333333333,
+        "per_level_f1": {
+          "Elementary": 0.4393939393939394,
+          "High School": 0.1724137931034483,
+          "Graduate": 0.6120689655172413
+        },
+        "confusion_matrix_actual_rows_predicted_columns": [
+          [
+            29,
+            19,
+            32
+          ],
+          [
+            21,
+            10,
+            49
+          ],
+          [
+            2,
+            7,
+            71
+          ]
+        ],
+        "spearman_rho": 0.4673324552712258,
+        "spearman_rho_controlling_length": 0.26562253912691436
+      }
+    }
+  }
+}

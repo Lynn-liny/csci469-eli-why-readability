@@ -1,0 +1,8 @@
+# Python 3.10+.
+# textstat supplies the Dale-Chall easy-word list; its own scores are used
+# only in validate_textstat.py.
+textstat==0.7.13
+# M2/M3: word frequencies and POS tagging. After installing, run
+#   python -m nltk.downloader averaged_perceptron_tagger_eng cmudict
+wordfreq==3.1.1
+nltk==3.10.4
