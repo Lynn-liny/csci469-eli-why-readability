@@ -5,8 +5,9 @@ CSCI 469 Group 16 project evaluating readability measures on ELI-Why explanation
 
 ```sh
 python -m pip install -r requirements.txt
-python -m nltk.downloader cmudict   # only needed for validate_textstat.py
+python -m nltk.downloader averaged_perceptron_tagger_eng cmudict
 python run_all.py                   # scores every measure, writes outputs/
+python error_analysis.py            # 50 worst dev errors per measure, pre-tagged
 python validate_textstat.py         # checks our M1 formulas against textstat
 ```
 
@@ -25,7 +26,11 @@ explanations, 400 questions). It is downloaded once and cached in `data/`
 | `validate_textstat.py` | Compares each M1 formula with textstat 0.7.13 on 100 train texts |
 | `m0_*.py` | M0 baselines: majority class, word count |
 | `m1_*.py` | M1 classic formulas: Flesch–Kincaid, Flesch Reading Ease, ARI, New Dale–Chall, SMOG, Coleman–Liau |
+| `m2_features.py` | M2 single lexical and syntactic features (word length, MATTR, word frequency, POS shares, noun-chunk length) |
+| `m3_terminology.py` | M3 terminology measure: G² term inventory from train (cross-fitted), term density, defined-term ratio |
+| `error_analysis.py` | Writes `outputs/error_analysis_<target>.csv` (worst 50 dev errors per measure, with heuristic tags and an empty `manual_category` column) and a summary table |
 | `M1_REPRODUCTION.md` | Per-formula notes and expected dev numbers |
+| `M2_M3_RESULTS.md` | M2/M3 method notes, dev results and first error-analysis findings |
 
 The individual `m0_*.py` and `m1_*.py` scripts still run on their own and
 print the same numbers as before.

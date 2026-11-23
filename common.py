@@ -83,22 +83,37 @@ def spearman(xs, ys):
     return cov / (vx * vy) ** 0.5 if vx and vy else 0.0
 
 
+def partial_spearman(xs, ys, zs):
+    """Spearman correlation of xs and ys with zs (e.g. word count) partialled out."""
+    rxy, rxz, ryz = spearman(xs, ys), spearman(xs, zs), spearman(ys, zs)
+    denominator = ((1 - rxz ** 2) * (1 - ryz ** 2)) ** 0.5
+    return (rxy - rxz * ryz) / denominator if denominator else 0.0
+
+
 def evaluate_measure(train, dev, measure, *, higher_means_easier=False):
     """Score one measure on dev for both label targets.
 
     Cutoffs are fit on train only (accuracy-maximizing, as in M0/M1).
     Spearman rho is reported in the "harder is larger" direction, so a
     positive value always means the measure agrees with the level order.
+    The length-controlled rho partials out word count, which by itself is
+    the strongest predictor of the perceived level; it shows what a measure
+    adds beyond "longer text reads as more advanced".
     """
+    from m0_word_count import word_count
+
     direction = -1 if higher_means_easier else 1
     dev_scores = [direction * measure(row) for row in dev]
+    lengths = [word_count(row) for row in dev]
     results = {}
     for name, field in LABEL_FIELDS.items():
         result = evaluate_cutoffs(
             train, dev, field, measure, higher_means_easier=higher_means_easier
         )
-        result["spearman_rho"] = spearman(
-            dev_scores, [LEVELS.index(row[field]) for row in dev]
+        levels = [LEVELS.index(row[field]) for row in dev]
+        result["spearman_rho"] = spearman(dev_scores, levels)
+        result["spearman_rho_controlling_length"] = partial_spearman(
+            dev_scores, levels, lengths
         )
         results[name] = result
     return results
@@ -106,5 +121,5 @@ def evaluate_measure(train, dev, measure, *, higher_means_easier=False):
 
 __all__ = [
     "LABEL_FIELDS", "LEVELS", "SEED", "SOURCE", "evaluate_measure", "load_rows",
-    "load_split", "question_index", "row_id", "spearman",
+    "load_split", "partial_spearman", "question_index", "row_id", "spearman",
 ]

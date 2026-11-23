@@ -12,6 +12,8 @@ from m1_dale_chall import dale_chall
 from m1_flesch_kincaid import grade_level
 from m1_flesch_reading_ease import reading_ease
 from m1_smog_coleman_liau import coleman_liau, smog
+from m2_features import FEATURES
+import m3_terminology
 
 
 def _easy_words():
@@ -22,8 +24,10 @@ def _easy_words():
     return frozenset(path.read_text(encoding="utf-8").lower().splitlines())
 
 
-def build():
+def build(train, others):
+    """All measures. M3 needs the split: train is cross-fitted, others use full train."""
     easy_words = _easy_words()
+    m3_scores, _ = m3_terminology.score_splits(train, others)
 
     def text(formula):
         return lambda row: formula(row["Explanation"])
@@ -37,4 +41,9 @@ def build():
         "dale_chall": ("M1", lambda row: dale_chall(row["Explanation"], easy_words), False),
         "smog": ("M1", text(smog), False),
         "coleman_liau": ("M1", text(coleman_liau), False),
+        **{name: ("M2", text(f), easier) for name, (f, easier) in FEATURES.items()},
+        **{
+            name: ("M3", lambda row, n=name: m3_scores[m3_terminology.key(row)][n], easier)
+            for name, easier in m3_terminology.SCORES.items()
+        },
     }
