@@ -35,3 +35,15 @@ The same train/dev split and train-only accuracy fitting apply. For human-percei
 | Intended | 47.08% | 0.433 | 0.713 | 0.513 | 0.210 | 0.576 |
 
 The human-perceived confusion matrix is `[[9, 54, 0], [9, 117, 2], [3, 42, 4]]`. ARI correctly predicts 4 of 49 Graduate texts. Word count correctly predicts zero, but its overall accuracy and macro-F1 are higher on this split.
+
+
+## New Dale–Chall
+
+Run `python -m pip install textstat==0.7.13` and then `python m1_dale_chall.py` from the repository root. The pinned package supplies its English easy-word list. Our script implements the formula and reuses the M1 word and sentence boundaries. It lowercases words, normalizes curly apostrophes, and uses exact word matches without stemming. The same question split and train-only accuracy fitting apply.
+
+| Label target | Accuracy | Macro-F1 | Mean absolute ordinal error | Elementary F1 | High School F1 | Graduate F1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Human-perceived | 57.08% | 0.387 | 0.446 | 0.467 | 0.693 | 0.000 |
+| Intended | 50.83% | 0.502 | 0.571 | 0.617 | 0.385 | 0.504 |
+
+The human-perceived confusion matrix is `[[25, 38, 0], [15, 112, 1], [4, 45, 0]]`. Of the 49 texts perceived as Graduate, word count classified all 49 as High School. Dale–Chall kept 45 at High School, moved four down to Elementary, and corrected zero. Its sole Graduate prediction was a false positive on a High School text. These dev results use cutoffs optimized for training accuracy. They cover the whole annotated dev subset, so they do not isolate the effect of short sentences with uncommon words.
