@@ -47,3 +47,36 @@ Run `python -m pip install textstat==0.7.13` and then `python m1_dale_chall.py` 
 | Intended | 50.83% | 0.502 | 0.571 | 0.617 | 0.385 | 0.504 |
 
 The human-perceived confusion matrix is `[[25, 38, 0], [15, 112, 1], [4, 45, 0]]`. Of the 49 texts perceived as Graduate, word count classified all 49 as High School. Dale–Chall kept 45 at High School, moved four down to Elementary, and corrected zero. Its sole Graduate prediction was a false positive on a High School text. These dev results use cutoffs optimized for training accuracy. They cover the whole annotated dev subset, so they do not isolate the effect of short sentences with uncommon words.
+
+
+## SMOG and Coleman–Liau
+
+Run `python m1_smog_coleman_liau.py`. Both reuse the M1 word, sentence and syllable rules. SMOG uses McLaughlin's formula normalized to 30 sentences: 1.0430 × √(polysyllables × 30 / sentences) + 3.1291, where a polysyllable has three or more syllables by our counter. Coleman–Liau uses 0.0588 L − 0.296 S − 15.8, with L letters and S sentences per 100 words. The same split and train-only cutoff fitting apply.
+
+| Measure | Label target | Accuracy | Macro-F1 | Mean absolute ordinal error | Spearman ρ |
+| --- | --- | ---: | ---: | ---: | ---: |
+| SMOG | Human-perceived | 55.00% | 0.333 | 0.450 | 0.343 |
+| SMOG | Intended | 48.33% | 0.476 | 0.633 | 0.422 |
+| Coleman–Liau | Human-perceived | 51.67% | 0.287 | 0.492 | 0.318 |
+| Coleman–Liau | Intended | 43.33% | 0.408 | 0.692 | 0.412 |
+
+
+## All measures in one run
+
+`python run_all.py` scores every measure in `measures.py` and writes `outputs/dev_summary.md`. It reproduces every accuracy, macro-F1 and ordinal error above and adds Spearman ρ between each dev score and the level (oriented so positive means harder text gets a higher level). On human-perceived levels, word count still has the highest accuracy (57.92%) and the highest ρ (0.521); among the formulas Dale–Chall is best (57.08%, ρ 0.418).
+
+
+## Validation against textstat
+
+`python validate_textstat.py` scores 100 train explanations (seed 469) with our implementations and with textstat 0.7.13. textstat is used only for this check.
+
+| Formula | Mean ours | Mean textstat | Mean absolute difference | Spearman ρ |
+| --- | ---: | ---: | ---: | ---: |
+| Flesch–Kincaid | 13.01 | 13.19 | 0.61 | 0.942 |
+| Flesch Reading Ease | 34.91 | 34.50 | 3.09 | 0.968 |
+| ARI | 12.98 | 13.98 | 1.03 | 0.927 |
+| Dale–Chall | 11.24 | 11.25 | 0.05 | 0.994 |
+| SMOG | 14.70 | 14.81 | 0.65 | 0.900 |
+| Coleman–Liau | 13.82 | 13.57 | 0.43 | 0.992 |
+
+Rank agreement is at least 0.90 for every formula. The remaining gaps come from counting rules: textstat counts syllables with the CMU dictionary and splits sentences differently, and its ARI counts characters differently, which explains ARI's one-grade offset.

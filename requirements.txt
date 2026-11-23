@@ -1,0 +1,4 @@
+# Python 3.10+. textstat supplies the Dale-Chall easy-word list and is used
+# for validate_textstat.py only; textstat's syllable counter needs the NLTK
+# cmudict corpus: python -m nltk.downloader cmudict
+textstat==0.7.13
